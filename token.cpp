@@ -1,7 +1,10 @@
 #include <iostream>
+#include "token.h"
 using namespace std;
+
 int p_ = 0;
 char token_buffer[100];
+
 void clear_buffer()
 {
 	memset(token_buffer, 0, sizeof(token_buffer));
@@ -13,11 +16,14 @@ void buffer_char(char ch)
 	p_++;
 
 }
+
 void lexical_error(char)
 {
 	cout << "lexical_error!" << endl;
 }
+
 token check_reserved();
+
 token get_token(void)
 {
 	int in_char, c;
@@ -34,7 +40,7 @@ token get_token(void)
 			buffer_char(in_char);
 			for (c = getchar(); isalnum(c) || c == '_'; c = getchar())//判断字符变量c是否为字母或数字，若是则返回非零，否则返回零。
 				buffer_char(c);
-			ungetc(c, stdin);//将c退回到输入流。理解很重要
+			ungetc(c, stdin);//将c退回到输入流。
 			return check_reserved();
 		}
 		else if (isdigit(in_char))

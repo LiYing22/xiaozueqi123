@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-char token_buffer[100];
+
 typedef enum token_types {
 	DELIMITER,//标示分隔符; | +-
 	IDENTIFIER,//标示ID标示符 var hello
