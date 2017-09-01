@@ -14,7 +14,6 @@ void buffer_char(char ch)
 {
 	token_buffer[p_] = ch;
 	p_++;
-
 }
 
 void lexical_error(char)

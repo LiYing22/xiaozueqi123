@@ -62,7 +62,7 @@ typedef enum token_types {
 
 
 } token;
-void clear_buffer();
+void clear_buffer();//
 void buffer_char(char ch);
 void lexical_error(char);
 token check_reserved();

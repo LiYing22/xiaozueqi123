@@ -1,10 +1,5 @@
 #include <iostream>
-#include <stdlib.h>
-#include<stdio.h>
-#include <string.h>
 #include "token.h"
-#include <iostream>
-using namespace std;
 using namespace std;
 
 #define stack_size 500

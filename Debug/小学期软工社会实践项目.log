@@ -1,9 +1,9 @@
 ﻿  主函数.cpp
-c:\users\ying\desktop\软件工程实践\xiaozueqi123\主函数.cpp(80): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\ying\desktop\软件工程实践\xiaozueqi123\主函数.cpp(75): warning C4996: 'freopen': This function or variable may be unsafe. Consider using freopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.15063.0\ucrt\stdio.h(242): note: 参见“freopen”的声明
   token.cpp
   do_int.cpp
   正在生成代码...
-c:\users\ying\desktop\软件工程实践\xiaozueqi123\token.cpp(163): warning C4715: “get_token”: 不是所有的控件路径都返回值
+c:\users\ying\desktop\软件工程实践\xiaozueqi123\token.cpp(165): warning C4715: “get_token”: 不是所有的控件路径都返回值
   小学期软工社会实践项目.vcxproj -> C:\Users\Ying\Desktop\软件工程实践\xiaozueqi123\Debug\小学期软工社会实践项目.exe
   小学期软工社会实践项目.vcxproj -> C:\Users\Ying\Desktop\软件工程实践\xiaozueqi123\Debug\小学期软工社会实践项目.pdb (Partial PDB)
