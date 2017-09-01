@@ -79,6 +79,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="do_int.cpp" />
+    <ClCompile Include="token.cpp" />
     <ClCompile Include="主函数.cpp" />
   </ItemGroup>
   <ItemGroup>

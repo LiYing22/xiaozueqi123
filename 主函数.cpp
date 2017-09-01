@@ -3,6 +3,8 @@
 #include<stdio.h>
 #include <string.h>
 #include "token.h"
+#include <iostream>
+using namespace std;
 using namespace std;
 
 #define stack_size 500
@@ -72,7 +74,7 @@ typedef struct
 }VARTANT;
 
 VARTANT memory[2000];//内存设多大合适
-
+void do_int();
 int main()
 {
     freopen("in.txt", "r", stdin);
