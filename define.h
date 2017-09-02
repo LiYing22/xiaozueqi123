@@ -15,5 +15,5 @@ typedef struct
 		STRING s;
 	};
 }VARTANT;
-
+extern char token_buffer[200];
 extern VARTANT memory[2000];//内存设多大合适

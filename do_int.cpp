@@ -4,7 +4,7 @@
 using namespace std;
 void do_int()
 {
-	token temp_, temp1_;
+
 	while (1)
 	{
 		switch (get_token())

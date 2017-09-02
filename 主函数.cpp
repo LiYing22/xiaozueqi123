@@ -48,11 +48,12 @@ static const OPERATOR operators[] =
 	/* 最小优先级 */
 	//{ 2, 0, 0, right2left, oper_min }      // 栈底  
 };
+char token_buffer[200];
 void do_int();
 int main()
 {
     freopen("in.txt", "r", stdin);
-	while (feof(stdin))
+	while (!feof(stdin))
 	{
 		weightmax = 0;
 		while ((c_ = getchar()) !=EOF)

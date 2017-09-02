@@ -1,14 +1,17 @@
 #include <iostream>
+#include <string>
 #include "token.h"
 #include "define.h"
 using namespace std;
 
-int p_ = 0;
-char token_buffer[100];
-
+int p_ = 0,token_i;
+extern char token_buffer[200];
 void clear_buffer()
 {
-	memset(token_buffer, 0, sizeof(token_buffer));
+	for (token_i = 0; token_i < 100; token_i++)
+	{
+		token_buffer[token_i] = 0;
+	}
 }
 
 void buffer_char(char ch)
