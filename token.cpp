@@ -36,6 +36,7 @@ token get_token(void)
 
 	while ((in_char = getchar()) != EOF)
 	{
+		p_ = 0;
 		if (isspace(in_char))
 			continue;
 		else if (isalpha(in_char))//判断字符ch是否为英文字母，若为英文字母，返回非0（小写字母为2，大写字母为1）。若不是字母，返回0。
@@ -49,7 +50,7 @@ token get_token(void)
 		else if (isdigit(in_char))
 		{
 			buffer_char(in_char);
-			for (c = getchar(); isdigit(c); c = getchar());
+			for (c = getchar(); isdigit(c); c = getchar())
 			buffer_char(c);
 			ungetc(c, stdin);
 			return INTLITERAL;

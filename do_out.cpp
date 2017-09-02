@@ -7,8 +7,6 @@ void do_out()
 {
 	int out_temp,out_num=0,i_out;//out_num代表循环次数
 	char c_out;
-	while (1)
-	{
 		switch (get_token())
 		{
 		case SEMICOLON:
@@ -17,7 +15,8 @@ void do_out()
 			}
 		case DELIMITER:
      		{
-			if ((c_out = getchar()) == '"')
+			while ((c_out = getchar()) == ' ');
+			if (c_out  == '"')
 			{
 				for (i_out = 0; i_out < out_num; i_out++)
 				{
@@ -28,6 +27,7 @@ void do_out()
 						else cout << c_out;
 					}
 				}
+				while ((c_out = getchar()) != ';');
 			}
 			else cout << out_num;
 	    	}//case end
@@ -40,22 +40,29 @@ void do_out()
 					cout << endl;
 				else cout << c_out;
 			  }
-			 if ((c_out = getchar()) != ';')
+			while ((c_out = getchar()) == ' ');
+			 if (c_out!= ';')
 			 {
 				get_token();
 				cout << out_num;
 			 }
+			 break;
     		}//case end
 		case INTLITERAL:
      		{
 			out_temp = 0;
-			if ((c_out = getchar()) == '"')
+			out_num = atoi(token_buffer);
+			while ((c_out = getchar()) == ' ');
+			if (c_out  == ',')
 			{
-				int o_num = 0;//字符串长度表示。
-				out_num = 3;
+				while ((c_out = getchar()) == ' ');
+				if (c_out== '"')
+				{
+					int o_num = 0;//字符串长度表示。
+
 					while ((c_out = getchar()) != '"')
 					{
-						if (c_out == '\\' )
+						if (c_out == '\\')
 						{
 							if ((c_out = getchar()) == 'n')
 							{
@@ -67,16 +74,17 @@ void do_out()
 							out_s[o_num] = c_out;
 							o_num++;
 						}
-						
+
 					}
+					while ((c_out = getchar()) != ';');
 					for (i_out = 0; i_out < out_num; i_out++)
 					{
 						if (out_temp == 1) cout << out_s << endl;
 						else cout << out_s;
 					}
+				}
 			}
+			break;
 	     	}//case end
-		}
-
-	}
+	   }
 }

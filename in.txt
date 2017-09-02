@@ -1,1 +1,3 @@
-out 10"I am grood!\n";
+out 10  ,  "I am grood!\n";
+out "heihei!\n";
+out "ffff\n";

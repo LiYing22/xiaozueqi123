@@ -64,30 +64,37 @@ int main()
 			case key_out:
 			{
 				do_out();
+				break;
 			}
 			case key_in:
 			{
 				//do_in();
+				break;
 			}
 			case key_if:
 			{
 				//do_if();
+				break;
 			}
 			case key_while:
 			{
 				//do_while();
+				break;
 			}
 			case key_int:
 			{
-				do_int();
+				//do_int();
+				break;
 			}
 			case key_real:
 			{
 				//do_real();
+				break;
 			}
 			case key_string:
 			{
 				//do_string();
+				break;
 			}
 			}
 
