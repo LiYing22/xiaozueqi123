@@ -22,6 +22,7 @@ typedef enum token_types {
 	RPRAEN,   //右括号
 	LBLOCK,//块标志 {
 	RBLOCK,//块标志 }
+	Double_quotes,
 
 	INTLITERAL, //没懂啥意思
 

@@ -8,7 +8,19 @@ void do_out()
 	{
 		switch (get_token())
 		{
-			case 
+		case SEMICOLON:
+			{
+			break;
+			}
+		case DELIMITER:
+     		{
+			
+	    	}
+		case Double_quotes:
+    		{
+             
+    		}
 		}
+
 	}
 }

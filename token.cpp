@@ -38,7 +38,7 @@ token get_token(void)
 		else if (isalpha(in_char))//判断字符ch是否为英文字母，若为英文字母，返回非0（小写字母为2，大写字母为1）。若不是字母，返回0。
 		{
 			buffer_char(in_char);
-			for (c = getchar(); isalnum(c) || c == '_'; c = getchar())//判断字符变量c是否为字母或数字，若是则返回非零，否则返回零。
+			for (c = getchar(); isalnum(c) ; c = getchar())//判断字符变量c是否为字母或数字，若是则返回非零，否则返回零。
 				buffer_char(c);
 			ungetc(c, stdin);//将c退回到输入流。
 			return check_reserved();
@@ -89,6 +89,10 @@ token get_token(void)
 			{
 				while ((in_char = getchar()) != '\n');
 			}
+		}
+		else if (in_char == '"')
+		{
+			return Double_quotes;
 		}
 		else if (in_char == '*')
 		{
