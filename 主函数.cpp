@@ -1,9 +1,9 @@
 #include <iostream>
 #include "token.h"
+#include "define.h"
+#include "do_out.h"
+#define stack_size 500;
 using namespace std;
-
-#define stack_size 500
-
 token get_token();
 char hang_[20];
 char c_;
@@ -15,7 +15,6 @@ typedef enum
 	left2right,
 	right2left
 }associativity;
-
 typedef struct
 {
 	int  number_;//操作数
@@ -24,7 +23,6 @@ typedef struct
 	associativity ass;   //结合性
 	token op;  //操作符
 }OPERATOR;
-
 static const OPERATOR operators[] =
 {
 	{ 2, 17, 1, left2right, LPRAEN },     // 左括号  
@@ -50,25 +48,6 @@ static const OPERATOR operators[] =
 	/* 最小优先级 */
 	//{ 2, 0, 0, right2left, oper_min }      // 栈底  
 };
-typedef enum
-{
-	var_null,
-	var_double,
-	var_string
-}variant_type;
-
-typedef char STRING[128];
-
-typedef struct
-{
-	variant_type type;
-	union{
-		double i;
-		STRING s;
-	};
-}VARTANT;
-
-VARTANT memory[2000];//内存设多大合适
 void do_int();
 int main()
 {
@@ -76,35 +55,26 @@ int main()
 	while (feof(stdin))
 	{
 		weightmax = 0;
-		while ((c_ = getchar()) != '\n')
+		while ((c_ = getchar()) !=EOF)
 		{
 			ungetc(c_, stdin);
 			switch (get_token())
 			{
 			case key_out:
 			{
-				weight = 4;
-				if (weight > weightmax) weightmax = weight;
+				do_out();
 			}
 			case key_in:
 			{
-				weight = 4;
-				if (weight > weightmax) weightmax = weight;
+				//do_in();
 			}
 			case key_if:
 			{
-				weight = 2;
-				if (weight > weightmax) weightmax = weight;
-			}
-			case key_else:
-			{
-				weight = 2;
-				if (weight > weightmax) weightmax = weight;
+				//do_if();
 			}
 			case key_while:
 			{
-				weight = 3;
-				if (weight > weightmax) weightmax = weight;
+				//do_while();
 			}
 			case key_int:
 			{
@@ -112,13 +82,11 @@ int main()
 			}
 			case key_real:
 			{
-				weight = 1;
-				if (weight > weightmax) weightmax = weight;
+				//do_real();
 			}
 			case key_string:
 			{
-				weight = 1;
-				if (weight > weightmax) weightmax = weight;
+				//do_string();
 			}
 			}
 

@@ -24,12 +24,21 @@
     <ClCompile Include="token.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="do_out.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="token.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="do_int.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="define.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="do_out.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

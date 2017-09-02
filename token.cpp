@@ -1,5 +1,6 @@
 #include <iostream>
 #include "token.h"
+#include "define.h"
 using namespace std;
 
 int p_ = 0;
@@ -197,5 +198,8 @@ token check_reserved()
 	{
 		return key_string;
 	}
-	else return IDENTIFIER;
+	else 
+	{
+		return DELIMITER;
+	}
 }
