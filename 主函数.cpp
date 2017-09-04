@@ -1,9 +1,18 @@
 #include <iostream>
-#include "token.h"
+#include <string>
 #include "define.h"
+#include "token.h"
+#include "do_int.h"
 #include "do_out.h"
+#include "do_real.h"
+#include "do_string.h"
 #define stack_size 500;
 using namespace std;
+
+#pragma warning(disable:4996)
+#include <map>
+map<string, string> VariableName;
+
 token get_token();
 char hang_[20];
 char c_;
@@ -52,7 +61,7 @@ char token_buffer[200];
 void do_int();
 int main()
 {
-    freopen("in.txt", "r", stdin);
+    freopen("in.txt","r",stdin);
 	while (!feof(stdin))
 	{
 		weightmax = 0;
@@ -83,23 +92,27 @@ int main()
 			}
 			case key_int:
 			{
-				//do_int();
+				do_int();
 				break;
 			}
 			case key_real:
 			{
-				//do_real();
+				do_real();
 				break;
 			}
 			case key_string:
 			{
-				//do_string();
+				do_string();
 				break;
 			}
 			}
 
 		}
 	}
+	map<string, string>::iterator iter;
+
+	for (iter = VariableName.begin(); iter != VariableName.end(); iter++)
+		cout << iter->first << ' ' << iter->second << endl;
 	system("pause");
 	return 0;
 }

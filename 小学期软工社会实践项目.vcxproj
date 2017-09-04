@@ -20,7 +20,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -79,15 +79,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="do_in.cpp" />
     <ClCompile Include="do_int.cpp" />
     <ClCompile Include="do_out.cpp" />
+    <ClCompile Include="do_real.cpp" />
+    <ClCompile Include="do_string.cpp" />
     <ClCompile Include="token.cpp" />
     <ClCompile Include="主函数.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="define.h" />
+    <ClInclude Include="do_in.h" />
     <ClInclude Include="do_int.h" />
     <ClInclude Include="do_out.h" />
+    <ClInclude Include="do_real.h" />
+    <ClInclude Include="do_string.h" />
     <ClInclude Include="token.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

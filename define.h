@@ -1,3 +1,6 @@
+//#include <map>
+//map<string, string> VariableName;
+
 typedef enum
 {
 	var_null,

@@ -23,9 +23,48 @@ void buffer_char(char ch)
 void lexical_error(char)
 {
 	cout << "lexical_error!" << endl;
+	return;
 }
 
-token check_reserved();
+token check_reserved()
+{
+	if (!strcmp(token_buffer, "in"))
+	{
+		return key_in;
+	}
+	else if (!strcmp(token_buffer, "out"))
+	{
+		return key_out;
+	}
+	else if (!strcmp(token_buffer, "while"))
+	{
+		return key_while;
+	}
+	else if (!strcmp(token_buffer, "if"))
+	{
+		return key_if;
+	}
+	else if (!strcmp(token_buffer, "else"))
+	{
+		return key_else;
+	}
+	else if (!strcmp(token_buffer, "int"))
+	{
+		return key_int;
+	}
+	else if (!strcmp(token_buffer, "real"))
+	{
+		return key_real;
+	}
+	else if (!strcmp(token_buffer, "string"))
+	{
+		return key_string;
+	}
+	else
+	{
+		return IDENTIFIER;
+	}
+}
 
 token get_token(void)
 {
@@ -170,44 +209,5 @@ token get_token(void)
 			return OP_delete;
 		}
 		else lexical_error(in_char);
-	}
-}
-token check_reserved()
-{
-	if (!strcmp(token_buffer, "in"))
-	{
-		return key_in;
-	}
-	else if (!strcmp(token_buffer, "out"))
-	{
-		return key_out;
-	}
-	else if (!strcmp(token_buffer, "while"))
-	{
-		return key_while;
-	}
-	else if (!strcmp(token_buffer, "if"))
-	{
-		return key_if;
-	}
-	else if (!strcmp(token_buffer, "else"))
-	{
-		return key_else;
-	}
-	else if (!strcmp(token_buffer, "int"))
-	{
-		return key_int;
-	}
-	else if (!strcmp(token_buffer, "real"))
-	{
-		return key_real;
-	}
-	else if (!strcmp(token_buffer, "string"))
-	{
-		return key_string;
-	}
-	else 
-	{
-		return DELIMITER;
 	}
 }

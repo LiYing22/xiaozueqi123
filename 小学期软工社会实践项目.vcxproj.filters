@@ -27,6 +27,15 @@
     <ClCompile Include="do_out.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="do_real.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="do_string.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="do_in.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="token.h">
@@ -39,6 +48,15 @@
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="do_out.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="do_real.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="do_string.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="do_in.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
